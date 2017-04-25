@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.2.20)  24 APR 2017 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=latex 2017.2.20)  25 APR 2017 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,6 +421,9 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \colbreak@box=\box51
 \mc@col@check@num=\count99
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen115
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -438,13 +441,13 @@ Package graphics Info: Driver file: dvips.def on input line 95.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip51
-\enit@outerparindent=\dimen117
+\enit@outerparindent=\dimen118
 \enit@toks=\toks18
 \enit@inbox=\box52
 \enitdp@description=\count100
@@ -483,11 +486,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks26
-\ex@=\dimen118
+\ex@=\dimen119
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen119
+\pmbraise@=\dimen120
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -504,7 +507,7 @@ LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box53
 \strutbox@=\box54
-\big@size=\dimen120
+\big@size=\dimen121
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count106
@@ -517,12 +520,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \column@=\count111
 \maxfields@=\count112
 \andhelp@=\toks28
-\eqnshift@=\dimen121
-\alignsep@=\dimen122
-\tagshift@=\dimen123
-\tagwidth@=\dimen124
-\totwidth@=\dimen125
-\lineht@=\dimen126
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
 \@envbody=\toks29
 \multlinegap=\skip56
 \multlinetaggap=\skip57
@@ -535,47 +538,47 @@ LaTeX Info: Redefining \] on input line 2736.
  (./resume.aux)
 \openout1 = `resume.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Info: Redefining \degres on input line 27.
-LaTeX Info: Redefining \dots on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Info: Redefining \degres on input line 28.
+LaTeX Info: Redefining \dots on input line 28.
 Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
 (frenchb.ldf)             compatibility with enumitem package,
-(frenchb.ldf)              on input line 27.
+(frenchb.ldf)              on input line 28.
 Package frenchb.ldf Info: Setting StandardEnumerateEnv=true for
 (frenchb.ldf)             compatibility with enumitem package,
-(frenchb.ldf)              on input line 27.
-LaTeX Info: Redefining \up on input line 27.
-LaTeX Font Info:    Try loading font information for U+msa on input line 29.
+(frenchb.ldf)              on input line 28.
+LaTeX Info: Redefining \up on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ] [2] [3] [4]
-[5] [6] [7] (./resume.aux) ) 
+[5] [6] [7] [8] (./resume.aux) ) 
 Here is how much of TeX's memory you used:
- 3520 strings out of 493030
- 43452 string characters out of 6136260
- 114801 words of memory out of 5000000
- 7019 multiletter control sequences out of 15000+600000
+ 3533 strings out of 493030
+ 43746 string characters out of 6136260
+ 115047 words of memory out of 5000000
+ 7028 multiletter control sequences out of 15000+600000
  18943 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,9n,30p,372b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on resume.dvi (7 pages, 20456 bytes).
+Output written on resume.dvi (8 pages, 24384 bytes).

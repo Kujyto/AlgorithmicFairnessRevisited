@@ -5,6 +5,7 @@
 \usepackage[francais]{babel}
 
 \usepackage{multicol}
+\usepackage{multirow}
 
 \usepackage[demo]{graphicx}
 \graphicspath{ {images/} }
@@ -276,6 +277,7 @@ La définition du ``G-test'' est une définition qui n'est pas créée par l'aut
 \end{myRem}
 
 \begin{myRem}
+  \label{contreExemple}
   On ne peut pas observer un biais sur des catégories en convertissant en donnée binaire.
   Exemple, la discrimination envers les personnes noires n'apparaît pas :
 
@@ -428,6 +430,156 @@ La définition du ``G-test'' est une définition qui n'est pas créée par l'aut
   \end{description}
 
   Après ces quatre étapes, on doit rajouter une étape d'études des résultats statistiques pour déterminer s'il y a vraiment un biais et si on doit réitérer en modifiant le dataset.
+\end{myRem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%      Travail effectué      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Travail effectué}
+
+Le travail effectué consiste à implémenter le pipeline précédemment décrit :
+\begin{enumerate}
+\item Récupérer des ensembles de données et les encoder par un encore one-hot
+\item Effacer les attributs protégés des ensembles d'entraînement et de test
+\item Entraîner un arbre de décision binaire sur l'ensemble d'entraînement privé des attributs protégés
+\item Comparer sa précision par rapport à une régression logistique pour évaluer la pertinence de l'approximation
+\item Pour chaque noeud de l'arbre, calculer le G-test par rapport aux attributs protégés et relever la p-valeur
+\item Afficher les noeuds où la p-valeur est faible pour interprétation de l'utilisateur
+\end{enumerate}
+
+Pour cela, il utilise 3 ensembles de données avec à chaque fois le sexe comme attribut protégé :
+\subsubsection*{Toy Credit Allocation}
+Un ensemble de données contenant des demandes de prêts pour soit une voiture, soit une maison, soit un voyage effectuées par un homme ou un femme avec l'information si elles ont été acceptées ou refusées.
+
+\begin{center}
+  \begin{tabular}{l@{\extracolsep{1em}}r r@{\extracolsep{1em}}r r}
+    \multirow{2}{*}{Purpose} & \multicolumn{2}{c}{Male} & \multicolumn{2}{c}{Female}
+    \\
+    \cline{2-3}
+    \cline{4-5}
+    & Applicants & Credit & Applicants & Credit
+    \\
+    \hline
+    Buy Car
+    &
+    2000 & 75\%
+    &
+    1000 & 50\%
+    \\
+    Buy House
+    &
+    2000 & 25\%
+    &
+    3000 & 50\%
+    \\
+    Buy Trip
+    &
+    2000 & 50\%
+    &
+    2000 & 50\%
+    \\
+    \hline
+    All
+    &
+    6000 & 50\%
+    &
+    6000 & 50\%
+    \\
+  \end{tabular}
+\end{center}
+
+\subsubsection*{Berkeley Admissions}
+
+Cet ensemble de données contient les résultats des admissions dans 6 départements de l'université de Berkeley en automne 1973. Il contient des candidatures renseignant le département, le sexe du candidat et s'il est admis ou non.
+
+\begin{center}
+  \begin{tabular}{c@{\extracolsep{1em}}r r@{\extracolsep{1em}}r r}
+    \multirow{2}{*}{Department} & \multicolumn{2}{c}{Male} & \multicolumn{2}{c}{Female}
+    \\
+    \cline{2-3}
+    \cline{4-5}
+    &
+    Applicants & Admitted
+    &
+    Applicants & Admitted
+    \\
+    \hline
+    A
+    &
+    825 & 62\%
+    &
+    108 & 82\%
+    \\
+    B
+    &
+    560 & 63\%
+    &
+    25 & 68\%
+    \\
+    C
+    &
+    325 & 37\%
+    &
+    593 & 34\%
+    \\
+    D
+    &
+    417 & 33\%
+    &
+    375 & 35\%
+    \\
+    E
+    &
+    191 & 28\%
+    &
+    393 & 24\%
+    \\
+    F
+    &
+    272 & 6\%
+    &
+    341 & 7\%
+    \\
+    \hline
+    All
+    &
+    2590 & 46\%
+    &
+    1835 & 30\%
+    \\
+  \end{tabular}
+\end{center}
+
+\subsubsection*{US Adult Census}
+
+Cet ensemble de données contient éléments décrits par 14 attributs (6 continus et 8 catégoriques), dont l'attribut protégé est le sexe, et vise à prédire si le revenu annuel de l'individu est supérieur ou inférieur à 50000 dollars.
+
+\begin{center}
+  \begin{tabular}{r r@{\extracolsep{1em}}r r}
+    \multicolumn{2}{c}{Male} & \multicolumn{2}{c}{Female}
+    \\
+    \cline{1-2}
+    \cline{3-4}
+    Applicants & > 50K
+    &
+    Applicants & > 50K
+    \\
+    32650 & 30.38\%
+    &
+    16192 & 10.93\%
+    \\
+  \end{tabular}
+\end{center}
+
+\begin{myRem}
+  Lors de l'encodage one-hot, une seule des catégories de l'attribut sensible n'est enregistrée. On a donc ramené l'attribut à valeur multiples à un attribut binaire.
+  Cela a pour conséquence de parfois masquer une discrimination comme décrit dans la remarque \ref{contreExemple}.
+\end{myRem}
+
+\begin{myRem}
+  Le code proposé ne permet pas de tester en fonction de plusieurs attributs protégés.
 \end{myRem}
 
 \end{document}
