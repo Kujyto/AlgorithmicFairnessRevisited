@@ -8,7 +8,7 @@ then
   exit $E_BADARGS
 fi
 
-OUTPUT="data/contre_exemple.data"
+OUTPUT="../data/contre_exemple.data"
 
 COUNT=$1
 echo "$COUNT samples for each race"
